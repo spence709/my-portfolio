@@ -1,0 +1,91 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "2024.3 - 2024.10",
+    title: "Lead Frontend Developer",
+    company: "RapidStart",
+    descriptions:["Overseeing the design and implementation of the frontend architecture.",
+"Collaborating closely with backend developers, designers, and product teams to create seamless and efficient user interfaces.",
+"Ensuring that the web application is optimized for speed, performance, and scalability.",
+"Leading the team in implementing best practices for coding, testing, and web development standards.",
+"Mentoring junior developers, conducting code reviews, and providing technical guidance.",
+"Staying updated on the latest frontend technologies and trends to keep the platform modern and efficient.",
+"Problem-solving and troubleshooting any frontend-related issues in the development process."]
+  },
+  {
+    date: "2022.11 - 2023.4",
+    title: "FullStack Developer",
+    company: "Encyte",
+    descriptions:[
+      "Engineered robust web applications leveraging React for front-end development and GoLang for server-side logic.",
+"Crafted modular and reusable React components, ensuring a scalable and maintainable codebase.",
+"Managed application state with Redux to maintain a predictable and consistent user experience.",
+"Developed RESTful APIs utilizing Gorilla Mux to facilitate efficient client-server communication.",
+"Integrated PostgreSQL and Redis for reliable and performant data storage solutions.",
+"Implemented JWT and OAuth2 protocols to secure applications through modern authentication mechanisms.",
+"Collaborated closely with product teams to define requirements and deliver high-quality software solutions.",
+"Conducted thorough code reviews with peers to maintain high standards of code quality and reliability",
+    ],
+  },
+
+  {
+    date: "2022.2 - 2022.8",
+    title: "Blockchain Developer",
+    company: "RDLand",
+    descriptions:[
+"Spearheaded blockchain market research and monitored cutting-edge technological advancements.",
+"Develop an NFT collection and associated metadata utilizing client-specific layers and traits, leveraging the hash-lip engine.",
+"Construct an NFT minting platform, complete with a robust minting smart contract.",
+"Establish an NFT marketplace featuring an integrated auction functionality.",
+"Design and mint a business token, while also developing staking token mechanisms and reward claim contracts.",
+"Collaboratively outline the scale and scope of the software project, finalizing data structures and design patterns with team members.",
+"Implement a streamlined Git workflow for the project, automating deployment across AWS, Firebase, and Vercel platforms.",
+"Conduct research on design patterns, professional architecture, and strategies to optimize performance and security.",
+    ],
+  },
+    {
+    date: "2020.1 - 2022.2",
+    title: "Web Developer",
+    company: "Shoclef",
+    descriptions:[
+"Spearheaded UI/UX design and development, delivering client-centric products with a keen focus on performance, security, SEO, and functionality.",
+"Played a pivotal role in quality assurance through rigorous testing and debugging, ensuring robust product releases.",
+"Enhanced front-end architecture, optimizing module organization for improved scalability and maintainability.",
+"Developed and integrated custom components for Google Product Feed, enriching e-commerce capabilities.",
+"Collaborated with an international team of developers to innovate and advance software application offerings.",
+    ],
+  },
+
+      {
+    date: "2017.04 - 2019.10",
+    title: "Freelance Software Developer",
+    company: "Upwork Freelancer jobs",
+    descriptions:[
+"Developed full-stack web applications using the MERN stack (MongoDB, Express, React, Node.js) with a focus on scalable, high-performance architecture.",
+"Built dynamic and responsive frontends using React, CSS3, HTML5, and JavaScript, incorporating popular libraries such as Redux and React Router.",
+"Collaborated closely with clients to analyze their requirements and translate them into effective product features.",
+"Conducted daily maintenance, debugging, and optimization of code, ensuring smooth functionality and addressing client issues promptly.",
+    ],
+  },
+];
+---
+
+<div class="relative max-md:mt-0 mt-8" aria-label="Professional experience">
+<ol style="max-height: 800px; overflow-y: auto;">
+    {
+      EXPERIENCE.map((experience, index) => (
+        <li class="">
+          <article role="article" aria-labelledby={`experience-title-${index}`}>
+            <div
+              class="flex flex-col gap-2  text-zinc-00 dark:text-zinc-300 md:col-span-3"
+              aria-describedby={`experience-title-${index}`}
+            >
+              <ExperienceItem {...experience} />
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</div>
